@@ -13,4 +13,9 @@ public class FrameworkApplicationTests {
 	public void contextLoads() {
 	}
 
+	@Test
+	public void basePackage(){
+		System.out.println(FrameworkApplication.class.getPackage().getName());
+	}
+
 }

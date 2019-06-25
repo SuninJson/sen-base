@@ -110,7 +110,7 @@ public class CodeGenerator {
         strategy.setSuperEntityClass("BaseEntity");
         strategy.setEntityLombokModel(true);
         strategy.setRestControllerStyle(true);
-        strategy.setSuperControllerClass("BaseController");
+        strategy.setSuperControllerClass("");
         strategy.setInclude(scanner("表名"));
         strategy.setSuperEntityColumns("id");
         strategy.setControllerMappingHyphenStyle(true);

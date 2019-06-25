@@ -1,5 +1,6 @@
 package com.sen.framework.config;
 
+import com.sen.framework.constant.ProjectConstant;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.ApiInfoBuilder;
@@ -16,6 +17,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @Configuration
 @EnableSwagger2
 public class Swagger2Config {
+
     @Bean
     public Docket createRestfulApi() {//api文档实例
         //文档类型：DocumentationType.SWAGGER_2
@@ -25,7 +27,7 @@ public class Swagger2Config {
                 //构建api选择器
                 .select()
                 //api选择器选择api的包
-                .apis(RequestHandlerSelectors.basePackage("com.tfm.framework"))
+                .apis(RequestHandlerSelectors.basePackage(ProjectConstant.BASE_PACKAGE))
                 //api选择器选择包路径下任何api显示在文档中
                 .paths(PathSelectors.any())
                 //创建文档

@@ -15,6 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/common/dict-detail")
-public class DictDetailController extends BaseController {
+public class DictDetailController{
 
 }
