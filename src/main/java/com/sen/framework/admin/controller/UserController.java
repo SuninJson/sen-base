@@ -25,7 +25,7 @@ public class UserController extends BaseController<User> {
     private IUserService userService;
 
     @Override
-    public IService getIService() {
+    public IService<User> getIService() {
         return userService;
     }
 }

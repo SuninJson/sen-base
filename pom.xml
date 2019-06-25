@@ -8,11 +8,11 @@
         <version>2.1.1.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.tfm</groupId>
+    <groupId>com.sen</groupId>
     <artifactId>framework</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <name>framework</name>
+    <name>sen-framework</name>
     <description>Basic project for applying framework to other projects</description>
 
     <properties>

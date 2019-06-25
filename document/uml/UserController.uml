@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.sen.framework.admin.controller.UserController</OriginalElement>
+  <nodes>
+    <node x="606.5" y="80.0">com.sen.framework.common.controller.BaseControllerAddible</node>
+    <node x="92.49999999999997" y="80.0">lombok.extern.slf4j.Slf4j</node>
+    <node x="397.5" y="80.0">com.sen.framework.common.controller.BaseControllerDeletable</node>
+    <node x="394.99999999999994" y="0.0">com.sen.framework.common.controller.BaseControllerOperable</node>
+    <node x="184.49999999999997" y="80.0">com.sen.framework.common.controller.BaseControllerQueryable</node>
+    <node x="167.49999999999997" y="240.0">com.sen.framework.admin.controller.UserController</node>
+    <node x="0.0" y="160.0">org.springframework.web.bind.annotation.RequestMapping</node>
+    <node x="167.99999999999997" y="160.0">org.springframework.web.bind.annotation.RestController</node>
+    <node x="320.0" y="160.0">com.sen.framework.common.controller.BaseController</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.sen.framework.common.controller.BaseControllerDeletable" target="com.sen.framework.common.controller.BaseControllerOperable">
+      <point x="0.0" y="-15.0" />
+      <point x="492.0" y="55.0" />
+      <point x="488.49999999999994" y="55.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="com.sen.framework.admin.controller.UserController" target="org.springframework.web.bind.annotation.RequestMapping">
+      <point x="-44.33333333333337" y="-15.0" />
+      <point x="189.6666666666666" y="215.0" />
+      <point x="74.0" y="215.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="com.sen.framework.common.controller.BaseController" target="com.sen.framework.common.controller.BaseControllerAddible">
+      <point x="49.875" y="-15.0" />
+      <point x="436.375" y="140.0" />
+      <point x="696.0" y="140.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="com.sen.framework.common.controller.BaseControllerAddible" target="com.sen.framework.common.controller.BaseControllerOperable">
+      <point x="0.0" y="-15.0" />
+      <point x="696.0" y="55.0" />
+      <point x="550.8333333333333" y="55.0" />
+      <point x="62.33333333333337" y="15.0" />
+    </edge>
+    <edge source="com.sen.framework.common.controller.BaseController" target="com.sen.framework.common.controller.BaseControllerDeletable">
+      <point x="16.625" y="-15.0" />
+      <point x="403.125" y="130.0" />
+      <point x="492.0" y="130.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="com.sen.framework.common.controller.BaseControllerQueryable" target="com.sen.framework.common.controller.BaseControllerOperable">
+      <point x="0.0" y="-15.0" />
+      <point x="281.0" y="55.0" />
+      <point x="426.16666666666663" y="55.0" />
+      <point x="-62.33333333333334" y="15.0" />
+    </edge>
+    <edge source="com.sen.framework.admin.controller.UserController" target="com.sen.framework.common.controller.BaseController">
+      <point x="44.33333333333337" y="-15.0" />
+      <point x="278.33333333333337" y="215.0" />
+      <point x="386.5" y="215.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="com.sen.framework.common.controller.BaseController" target="com.sen.framework.common.controller.BaseControllerQueryable">
+      <point x="-16.625" y="-15.0" />
+      <point x="369.875" y="130.0" />
+      <point x="281.0" y="130.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="com.sen.framework.admin.controller.UserController" target="org.springframework.web.bind.annotation.RestController">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="com.sen.framework.common.controller.BaseController" target="lombok.extern.slf4j.Slf4j">
+      <point x="-49.875" y="-15.0" />
+      <point x="336.625" y="140.0" />
+      <point x="128.49999999999997" y="140.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="394.0" y="135.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

@@ -15,7 +15,7 @@ import java.io.StringWriter;
  *
  * @author chen
  */
-public class ApiResultObject {
+public class ApiResult {
 
     // ----------------------------------------异常码(http状态码)--------------------------------------------------
     // 正常返回
@@ -82,19 +82,19 @@ public class ApiResultObject {
      */
     private String requestId = "";
 
-    public ApiResultObject() {
+    public ApiResult() {
 
     }
 
-    public ApiResultObject(int code, Object data, String msg, String msgDetail) {
+    public ApiResult(int code, Object data, String msg, String msgDetail) {
         this(code, data, msg, msgDetail, null, null);
     }
 
-    public ApiResultObject(int code, Object data, String msg, Exception exception) {
+    public ApiResult(int code, Object data, String msg, Exception exception) {
         this(code, data, msg, getDetailMsg(exception), null, null);
     }
 
-    public ApiResultObject(int code, Object data, String msg, String msgDetail, String codeDetail, String moreInfo) {
+    public ApiResult(int code, Object data, String msg, String msgDetail, String codeDetail, String moreInfo) {
         this.code = code;
         this.data = data;
         this.msg = msg;
@@ -165,7 +165,7 @@ public class ApiResultObject {
      * @param value
      * @return
      */
-    public ApiResultObject setData(String key, Object value) {
+    public ApiResult setData(String key, Object value) {
         // 如果data不是JSONObject对象，则将data转化为JSONObject对象
         if (!(this.data instanceof JSONObject)) {
             this.data = JSONObject.parseObject(JSON.toJSONString(this.data));
