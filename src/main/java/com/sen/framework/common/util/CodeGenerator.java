@@ -9,6 +9,7 @@ import com.baomidou.mybatisplus.generator.config.*;
 import com.baomidou.mybatisplus.generator.config.po.TableInfo;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
+import com.sen.framework.constant.ProjectConstant;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -61,7 +62,7 @@ public class CodeGenerator {
         // 包配置
         PackageConfig pc = new PackageConfig();
         pc.setModuleName(scanner("模块名"));
-        pc.setParent("com.tfm.framework");
+        pc.setParent(ProjectConstant.BASE_PACKAGE);
         mpg.setPackageInfo(pc);
 
         // 自定义配置

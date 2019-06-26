@@ -14,11 +14,11 @@ public enum ErrorCode {
     NOT_FOUND(404, "Not Found"),
     METHOD_NOT_ALLOWED(405, "Method Not Allowed"),
     REQUEST_TIMEOUT(408, "Request Timeout"),
-    SERVER_ERROR(500, "Server Error");
-
+    SERVER_ERROR(500, "Server Error"),
+    JSON_PARSE_ERROR(10000, "Json Parse Error");
     private final int code;
     private final String msg;
-	  
+
     ErrorCode(int code, String msg) {
         this.code = code;
         this.msg = msg;
