@@ -4,13 +4,13 @@ server:
 spring:
   datasource:
     #数据库的url、登录名、密码和数据库名
-    url: jdbc:mysql://127.0.0.1:3306/tf?useSSL=false&serverTimezone=GMT
+    url: jdbc:mysql://127.0.0.1:3306/sen?useSSL=false&serverTimezone=GMT
     username: root
     password: root
     # 使用阿里的Druid连接池
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
-      url: jdbc:mysql://127.0.0.1:3306/tf?useSSL=false&serverTimezone=GMT
+      url: jdbc:mysql://127.0.0.1:3306/sen?useSSL=false&serverTimezone=GMT
       username: root
       password: root
       # 连接池的配置信息

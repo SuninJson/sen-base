@@ -7,6 +7,6 @@ import com.sen.framework.FrameworkApplication;
  * @date 2019/6/25
  * @description
  */
-public class ProjectConstant {
+public class ProjectProperties {
     public static final String BASE_PACKAGE = FrameworkApplication.class.getPackage().getName();
 }

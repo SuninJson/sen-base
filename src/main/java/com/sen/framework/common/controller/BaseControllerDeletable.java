@@ -22,7 +22,7 @@ public interface BaseControllerDeletable<T> extends BaseControllerOperable<T> {
     })
     @DeleteMapping("/delete")
     default void delete(@RequestBody Map<String, Object> columnMap) {
-        IService<T> service = getIService();
+        IService<T> service = service();
         service.removeByMap(columnMap);
     }
 }

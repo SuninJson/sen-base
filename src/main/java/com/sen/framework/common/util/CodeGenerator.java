@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.generator.config.*;
 import com.baomidou.mybatisplus.generator.config.po.TableInfo;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
-import com.sen.framework.constant.ProjectConstant;
+import com.sen.framework.constant.ProjectProperties;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -53,7 +53,7 @@ public class CodeGenerator {
 
         // 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:mysql://127.0.0.1:3306/tf?useSSL=false&serverTimezone=GMT");
+        dsc.setUrl("jdbc:mysql://127.0.0.1:3306/sen?useSSL=false&serverTimezone=GMT");
         dsc.setDriverName("com.mysql.cj.jdbc.Driver");
         dsc.setUsername("root");
         dsc.setPassword("root");
@@ -61,8 +61,9 @@ public class CodeGenerator {
 
         // 包配置
         PackageConfig pc = new PackageConfig();
-        pc.setModuleName(scanner("模块名"));
-        pc.setParent(ProjectConstant.BASE_PACKAGE);
+        //scanner("模块名")
+        pc.setModuleName("test");
+        pc.setParent(ProjectProperties.BASE_PACKAGE);
         mpg.setPackageInfo(pc);
 
         // 自定义配置
@@ -108,11 +109,12 @@ public class CodeGenerator {
         StrategyConfig strategy = new StrategyConfig();
         strategy.setNaming(NamingStrategy.underline_to_camel);
         strategy.setColumnNaming(NamingStrategy.underline_to_camel);
-        strategy.setSuperEntityClass("BaseEntity");
+        strategy.setSuperEntityClass("com.sen.framework.common.entity.BaseEntity");
         strategy.setEntityLombokModel(true);
         strategy.setRestControllerStyle(true);
-        strategy.setSuperControllerClass("");
-        strategy.setInclude(scanner("表名"));
+//        strategy.setSuperControllerClass("");
+        //表名
+        strategy.setInclude("view_user","sys_role");
         strategy.setSuperEntityColumns("id");
         strategy.setControllerMappingHyphenStyle(true);
         strategy.setTablePrefix(pc.getModuleName() + "_");

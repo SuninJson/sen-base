@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
  * @date 2019/6/25
  * @description
  */
-public interface BaseControllerAddible<T> extends BaseControllerOperable<T> {
+public interface BaseControllerAddable<T> extends BaseControllerOperable<T> {
 
     @ApiOperation(value = "通用添加接口")
     @ApiImplicitParams({
@@ -20,7 +20,7 @@ public interface BaseControllerAddible<T> extends BaseControllerOperable<T> {
     })
     @PostMapping("/add")
     default void add(@RequestBody T inParam) {
-        IService<T> service = getIService();
+        IService<T> service = service();
         service.save(inParam);
     }
 }

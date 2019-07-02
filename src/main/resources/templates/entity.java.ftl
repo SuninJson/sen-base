@@ -12,6 +12,8 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
 </#if>
+import com.sen.framework.common.entity.BaseEntity;
+
 
 /**
  * <p>

@@ -1,4 +1,4 @@
-package com.sen.framework.common.bean;
+package com.sen.framework.common.entity;
 
 /**
  * @author Evan Huang

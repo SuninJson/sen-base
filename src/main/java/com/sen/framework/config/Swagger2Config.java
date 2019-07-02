@@ -1,6 +1,6 @@
 package com.sen.framework.config;
 
-import com.sen.framework.constant.ProjectConstant;
+import com.sen.framework.constant.ProjectProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.ApiInfoBuilder;
@@ -27,7 +27,7 @@ public class Swagger2Config {
                 //构建api选择器
                 .select()
                 //api选择器选择api的包
-                .apis(RequestHandlerSelectors.basePackage(ProjectConstant.BASE_PACKAGE))
+                .apis(RequestHandlerSelectors.basePackage(ProjectProperties.BASE_PACKAGE))
                 //api选择器选择包路径下任何api显示在文档中
                 .paths(PathSelectors.any())
                 //创建文档

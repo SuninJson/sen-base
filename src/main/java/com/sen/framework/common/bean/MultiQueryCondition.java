@@ -2,6 +2,7 @@ package com.sen.framework.common.bean;
 
 import lombok.Data;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -9,6 +10,6 @@ import java.util.List;
  * @date 2019/1/10
  */
 @Data
-public class MultiQueryCondition {
-    private List<SingleQueryCondition> singleQueryConditionList;
+public class MultiQueryCondition{
+    private List<SingleQueryCondition> queryConditionList;
 }

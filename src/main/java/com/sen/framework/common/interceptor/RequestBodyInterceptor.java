@@ -14,7 +14,7 @@ import java.lang.reflect.AnnotatedElement;
 import java.lang.reflect.Type;
 import java.util.Arrays;
 
-@ControllerAdvice(annotations = RestController.class)
+//@ControllerAdvice(annotations = RestController.class)
 public class RequestBodyInterceptor implements RequestBodyAdvice {
 
 
