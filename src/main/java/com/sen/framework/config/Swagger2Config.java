@@ -39,7 +39,7 @@ public class Swagger2Config {
      */
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("Spring Boot中使用Swagger2构建RESTful接口")
+                .title("Sen Base")
                 .description("接口描述")
                 .termsOfServiceUrl("termsOfServiceUrl")
                 .version("1.0")

@@ -1,0 +1,31 @@
+# Spring Boot 如何启动Tomcat
+
+## 启动日志反推
+
+```json
+o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080
+```
+
+- org.apache.catalina.startup.Tomcat#start
+- org.springframework.boot.web.embedded.tomcat.TomcatWebServer#initialize
+- org.springframework.boot.web.embedded.tomcat.TomcatWebServer#TomcatWebServer(org.apache.catalina.startup.Tomcat, boolean)
+- org.springframework.boot.web.embedded.tomcat.TomcatWebServer#TomcatWebServer(org.apache.catalina.startup.Tomcat)
+- org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory#getTomcatWebServer
+- org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory#getWebServer
+- org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext#createWebServer
+- org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext#onRefresh
+  - GenericWebApplicationContext
+
+## ApplicationContext初始化流程
+
+- org.springframework.boot.WebApplicationType#deduceFromClasspath
+- org.springframework.boot.SpringApplication#createApplicationContext
+  - `AnnotationConfigServletWebServerApplicationContext`
+- org.springframework.boot.SpringApplication#refreshContext
+- org.springframework.boot.SpringApplication#refresh
+- org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext#refresh
+- org.springframework.context.support.AbstractApplicationContext#refresh
+- org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext#onRefresh
+
+ 
+
