@@ -14,6 +14,7 @@ import com.sen.framework.common.util.ClassUtil;
 import com.sen.framework.common.util.ExceptionConst;
 import com.sen.framework.common.util.SpringContextUtils;
 import com.sen.framework.common.util.StringUtils;
+import com.sen.framework.constant.ProjectProperties;
 import org.apache.commons.lang3.ArrayUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -29,10 +30,9 @@ import java.util.stream.Collectors;
  * @author Evan Huang
  * @date 2019/5/21
  */
-public class SettlementHandlerBeanFactory<T> {
-    private static final Logger logger = LoggerFactory.getLogger(SettlementHandlerBeanFactory.class);
+public class SettlementHandlerBeanFactory {
     public static final List<BaseSettlementHandler> firstHandlers = new ArrayList<>();
-    public static final String SCAN_PACKAGE = "com.iquantex.qow.service";
+    public static final String SCAN_PACKAGE = ProjectProperties.BASE_PACKAGE;
 
     static {
         List<Class<?>> firstHandlers = ClassUtil.getAllClassByAnnotation(SCAN_PACKAGE, SettlementFirstHandler.class);

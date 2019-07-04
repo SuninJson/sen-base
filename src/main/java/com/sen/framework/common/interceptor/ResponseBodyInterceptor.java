@@ -15,7 +15,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
 import java.lang.reflect.AnnotatedElement;
 import java.util.Arrays;
 
-//@ControllerAdvice(annotations = RestController.class)
+@ControllerAdvice(annotations = RestController.class)
 public class ResponseBodyInterceptor implements ResponseBodyAdvice {
 
     private ThreadLocal<ObjectMapper>  mapperThreadLocal = ThreadLocal.withInitial(ObjectMapper::new);
